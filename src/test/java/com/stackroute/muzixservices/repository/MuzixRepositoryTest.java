@@ -1,6 +1,4 @@
 package com.stackroute.muzixservices.repository;
-
-
 import com.stackroute.muzixservices.domain.Track;
 import org.junit.After;
 import org.junit.Assert;
@@ -38,7 +36,6 @@ public class MuzixRepositoryTest {
         trackRepository.deleteAll();
     }
 
-
     @Test
     public void testSaveTrack(){
         trackRepository.save(track);
@@ -58,7 +55,7 @@ public class MuzixRepositoryTest {
     @Test
     public void testGetAlltrack(){
         Track track = new Track(2,"Minchagi","Singer:Sonu Nigam");
-        Track track1 = new Track(1,"Kunidu Kunidu Baare","Udith Narayan");
+        Track track1 = new Track(1,"Minchagi","Udith Narayan");
         trackRepository.save(track);
         trackRepository.save(track1);
 
