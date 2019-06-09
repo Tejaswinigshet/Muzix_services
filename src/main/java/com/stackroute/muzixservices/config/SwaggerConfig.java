@@ -1,7 +1,6 @@
 package com.stackroute.muzixservices.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-//import static jdk.internal.joptsimple.util.RegexMatcher.regex;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -18,8 +17,7 @@ public class SwaggerConfig {
     public Docket api(){
         return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.basePackage("com.stackroute")).paths(regex("/api/v1/.*")).build().apiInfo(appInfo());
     }
-
-    private ApiInfo appInfo(){
+ private ApiInfo appInfo(){
         ApiInfo apiInfo = new ApiInfo("Muzix API(playmusic)","Spring boot Application for sound tracks","1.0","Terms Of Service","Muzix aka playmusic","Apache License Version 2.0","https://www.apache.org/license.html");
         return apiInfo;
     }
