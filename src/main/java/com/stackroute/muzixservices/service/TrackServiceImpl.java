@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class TrackServiceImpl implements TrackService {
-
     @Autowired
     private TrackRepository trackRepository;
     private TrackServiceImpl trackServiceImpl;
@@ -17,10 +16,10 @@ public class TrackServiceImpl implements TrackService {
     public void setTrackRepository(TrackRepository trackRepository) {
         this.trackRepository = trackRepository;
     }
-
-    public TrackServiceImpl(TrackRepository trackRepository) {
+     public TrackServiceImpl(TrackRepository trackRepository) {
         this.trackRepository = trackRepository;
     }
+    
 
     @Override
     public Track saveTrack(Track track) throws  TrackAlreadyExistsException {
